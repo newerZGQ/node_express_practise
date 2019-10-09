@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', entries.list);
 app.use('/users', usersRouter);
 app.get('/post', entries.form);
-app.post('/post', entries.form);
+app.post('/post', entries.submit);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
